@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amna Ayub | Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for Professional Color Scheme */
+        :root {
+            --primary-purple: #6366f1;
+            --dark-navy: #0f172a;
+            --light-bg: #f8fafc;
+            --text-gray: #475569;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-navy);
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-navy);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-purple);
+        }
+
+        section {
+            padding: 100px 8% 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--dark-navy);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-purple);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+       
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90vh;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h3 {
+            color: var(--primary-purple);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-img img {
+            width: 350px;
+            height: 350px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 10px solid var(--white);
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .skill-card h4 {
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-purple);
+            font-weight: bold;
+        }
+
+        
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-purple);
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h4 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .tools {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            text-transform: uppercase;
+        }
+
+    
+        .btn {
+            padding: 12px 30px;
+            background: var(--primary-purple);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero { flex-direction: column-reverse; text-align: center; }
+            .hero-img { justify-content: center; margin-bottom: 40px; }
+            .hero-text h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">AMNA AYUB</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Eduction.html">Eduction</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h3>HELLO, I'M</h3>
+            <h1>Amna Ayub</h1>
+            <p class="tagline">Software Engineering| Application Developer | Student</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="hero-img">
+            <img src="C:\Users\Laptop Zone\Pictures\assignmentlab">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="text-align: center; max-width: 800px; margin: auto;">
+            <p>Passionate Software Engineer committed to bridging the gap between complex human needs and innovative digital platforms. With a foundational background in Clinical Psychology, I bring a unique analytical perspective to software architecture and user flow. I thrive in continuous learning environments and am driven to develop high-quality, efficient applications that improve daily lives and drive professional growth.</p>
+        </div>
+    </section>
+
+    <section id="education" style="background: #edf2f7;">
+        <h2>Education</h2>
+        <div style="text-align: center;">
+            <h4 style="font-size: 1.5rem;">BS in Software Engineering</h4>
+            <p>University of Lahore | Expected Graduation: 2026</p>
+            <p style="margin-top: 15px; font-weight: 600;">Core Subjects:</p>
+            <p>Application Development, Web Development, Programming Language</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h4>Technical Skills</h4>
+                <ul class="skill-list">
+                    <li>HTML & CSS</li>
+                    <li>Dart & Flutter</li>
+                    <li>SQL Databases</li>
+                    <li>C++ & Python</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>Soft Skills</h4>
+                <ul class="skill-list">
+                    <li>Team Leadership</li>
+                    <li>Effective Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Active Listening</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: #edf2f7;">
+        <h2>Projects Portfolio</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Ghazal-e-Mehfil</h4>
+                    <p>A mobile music application designed for ghazal enthusiasts featuring system architecture and custom UI.</p>
+                    <p class="tools">Tools: Flutter, Dart, Firebase</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>JoyWrap Studio</h4>
+                    <p>Branding and digital presence for a gift packaging business venture.</p>
+                    <p class="tools">Tools: Figma, HTML, CSS</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Psychology Research</h4>
+                    <p>Quantitative research project focused on mental health metrics and data analysis.</p>
+                    <p class="tools">Tools: SPSS, Excel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div style="text-align: center;">
+            <p>Let's work together or discuss a project!</p>
+            <div style="margin: 30px 0;">
+                <p>Email: <a href="mailto:amna.ayub260@gmail.com" style="color: var(--primary-purple);">amna.ayub260@gmail.com</a></p>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn" style="background: #333;">GitHub Profile</a>
+                <a href="#" class="btn" style="background: #0077b5; margin-left: 10px;">LinkedIn</a>
+                <a href="#" class="btn" style="background: #e11d48; margin-left: 10px;">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background: var(--dark-navy); color: white;">
+        <p>&copy; 2026 Amna Ayub. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

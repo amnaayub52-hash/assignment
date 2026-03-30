@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Projects | Amna Ayub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Outfit:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #f8fafc;
+            --white: #ffffff;
+            --text-dark: #0f172a;
+            --accent: #4338ca;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text-dark); }
+
+        /* Navigation */
+        header { background: var(--white); padding: 1rem 8%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+        .logo { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.9rem; }
+
+        /* Project Header & Stats */
+        .projects-hero { text-align: center; padding: 80px 8% 40px; background: linear-gradient(to bottom, #ffffff, #f8fafc); }
+        .projects-hero h1 { font-family: 'Outfit', sans-serif; font-size: 3.5rem; margin-bottom: 15px; }
+        
+        /* Naya Add-on: Quick Stats Counter */
+        .project-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        .stat-item h3 { font-size: 2rem; color: var(--primary); }
+        .stat-item p { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 0 8%;
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 30px; 
+            justify-content: center;
+        }
+
+        /* Modern Project Card */
+        .project-card {
+            background: var(--white);
+            width: 360px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+        }
+
+        /* Image Placeholder with Overlay */
+        .project-img-box {
+            width: 100%;
+            height: 220px;
+            background: #eef2ff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .project-status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .project-info { padding: 30px; flex-grow: 1; }
+        .project-info h2 { font-size: 1.5rem; margin-bottom: 12px; }
+        .project-info p { font-size: 0.9rem; color: #64748b; margin-bottom: 20px; line-height: 1.6; }
+
+        /* Skill Pills */
+        .tech-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 25px; }
+        .tech-pill {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-footer {
+            padding: 0 30px 30px;
+        }
+
+        .view-btn {
+            display: block;
+            text-align: center;
+            background: var(--text-dark);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .view-btn:hover { background: var(--primary); }
+
+        footer { text-align: center; padding: 60px; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AMNA AYUB<span>.</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="projects.html" style="color: var(--primary);">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-hero">
+        <h1>Creative <span>Portfolio</span></h1>
+        <p>Software Engineering.</p>
+        
+        <div class="project-stats">
+            <div class="stat-item">
+                <h3>03+</h3>
+                <p>Live Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Dedication</p>
+            </div>
+            <div class="stat-item">
+                <h3>Final</h3>
+                <p>Year Student</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="project-card">
+            <span class="project-status">IN PROGRESS</span>
+            <div class="project-img-box">🎵</div>
+            <div class="project-info">
+                <h2>Ghazal-e-Mehfil</h2>
+                <p>A mobile application designed for ghazal lovers, focusing on high-quality audio streaming and poetic lyrics.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Dart</span>
+                    <span class="tech-pill">Firebase</span>
+                </div>
+            </div>
+            <div class="project-footer">
+                <a href="#" class="view-btn">Case Study</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <span class="project-status">COMPLETED</span>
+            <div class="project-img-box">🎁</div>
+            <div class="project-info">
+                <h2>JoyWrap Studio</h2>
+                <p>Full branding and business identity for a premium gift packaging service, including digital assets.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">Figma</span>
+                    <span class="tech-pill">Branding</span>
+                    <span class="tech-pill">UI Design</span>
+                </div>
+            </div>
+            <div class="project-footer">
+                <a href="#" class="view-btn">View Design</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <span class="project-status">RESEARCH</span>
+            <div class="project-img-box">🧠</div>
+            <div class="project-info">
+                <h2>Psych-Data Analyzer</h2>
+                <p>A web tool to analyze quantitative research data specifically for clinical psychology assignments.</p>
+                <div class="tech-stack">
+                    <span class="tech-pill">HTML/CSS</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">SPSS</span>
+                </div>
+            </div>
+            <div class="project-footer">
+                <a href="#" class="view-btn">Coming Soon</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Amna Ayub | Built with HTML & CSS
+    </footer>
+
+</body>
+</html>

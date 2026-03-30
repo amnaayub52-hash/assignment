@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV | Amna Ayub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Outfit:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #f1f5f9;
+            --white: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text-dark); line-height: 1.6; }
+
+        /* Navigation Bar (Same as Home) */
+        header { background: var(--white); padding: 1rem 8%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+        .logo { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* CV Layout */
+        .cv-container { max-width: 900px; margin: 50px auto; background: var(--white); padding: 50px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; }
+        
+        .cv-header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 30px; margin-bottom: 30px; }
+        .cv-header h1 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; margin-bottom: 5px; }
+        .cv-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+        .cv-section { margin-bottom: 40px; }
+        .cv-section h2 { font-size: 1.4rem; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .cv-item { margin-bottom: 20px; }
+        .cv-item h4 { font-size: 1.1rem; margin-bottom: 2px; }
+        .cv-item .meta { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 5px; }
+        .cv-item p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* Download Button */
+        .download-area { text-align: center; margin-top: 20px; }
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4); }
+
+        @media (max-width: 600px) { .cv-container { padding: 20px; margin: 20px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">AMNA AYUB</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cv-container">
+        <div class="cv-header">
+            <h1>Amna Ayub</h1>
+            <p> Software Developer</p>
+        </div>
+
+        <div class="cv-section">
+            <h2>Education</h2>
+            <div class="cv-item">
+                <h4>BS in Software Engineering</h4>
+                <div class="meta">University of Lahore | 2022 - 2026 (Expected)</div>
+                <p>Specializing in Psychotherapy and Quantitative Research Methodologies.</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Experience</h2>
+            <div class="cv-item">
+                <h4>Software Development (FYP)</h4>
+                <div class="meta">Academic Project | 2026 - Present</div>
+                <p>Developing "Ghazal-e-Mehfil", a mobile music app using Flutter and Dart for ghazal enthusiasts.</p>
+            </div>
+            <div class="cv-item">
+                <h4>Graphic Designer & Branding</h4>
+                <div class="meta">JoyWrap Studio | 2025</div>
+                <p>Managed branding and digital design for a gift packaging startup.</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Certifications</h2>
+            <div class="cv-item">
+                <h4>HEC National Skill Competency</h4>
+                <div class="meta">Qualified - 2026</div>
+                <p>Expertise in Computer Networks and Cloud Computing.</p>
+            </div>
+        </div>
+
+        <div class="download-area">
+            <a href="my-cv.pdf" download class="btn-download">Download Full PDF CV</a>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #999;">Click to save as PDF</p>
+        </div>
+    </div>
+
+</body>
+</html>
